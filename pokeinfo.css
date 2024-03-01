@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(80deg,rgb(246, 246, 246),rgb(133, 133, 133),rgb(124, 123, 123));
+    text-align: center;
+    display: flex;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+@font-face {
+    font-family: 'Pokemon';
+    src: url('Pokemon Hollow.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+#container {
+    margin-top: 10%;
+    padding: 5% 5% 5% 5%;
+    border-radius: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a09f9fe1;
+    box-shadow: 0 0 10px #212F3C,  0 0 10px #212F3C;
+
+}
+
+#containerStats{
+    display: flex;
+}
+#container-btn{
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 80%;
+    margin-top: 1%;
+    width: 80px;
+    height: 40px;
+    box-shadow: inset 4px 4px 6px grey, inset -4px -4px 6px grey;
+    cursor: pointer;
+}
+.toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    transform: scale(.7);
+    background-color: linear-gradient(145deg, white,black);
+    border-radius: 25px;box-shadow: 3px 3px 8px grey,-3px -3px 8px grey;
+}
+#container-btn.active .toggle{
+    left: 40px;
+    
+}
+body.active{
+    background: #252525;
+    color: white;
+}
+#container.active{
+    background-color: rgb(37, 37, 37);
+    box-shadow: 0 0 10px #bdbdbd,  0 0 10px #bdbdbd
+}
+
+#info{
+    background-color: brown;
+}
+
+.containerGrafica {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.stats {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px; 
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.stats th, .stats td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.stats th {
+    background-color: #f2f2f200;
+}
+
+.stats tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.stats tr:hover {
+    background-color: #ddd;
+}
+
+
+
+#vida{
+    background-color: #5D6D7E ;
+    padding-bottom: 10%;
+}
+#ataque{
+    background-color: #5D6D7E;
+    padding-bottom: 10%;
+
+}
+#Defensa{
+    background-color: #5D6D7E;
+    padding-bottom: 10%;
+
+}
+#Atesp{
+    background-color: #5D6D7E;
+    padding-bottom: 10%;
+
+}
+#Defesp{
+    background-color: #5D6D7E;
+    padding-bottom: 10%;
+
+}
+#Velocidad{
+    background-color: #5D6D7E;
+    padding-bottom: 10%;  
+}
+
+
+ul{
+    list-style: none;
+    text-align: left;
+}
+
+#containerEvolution{
+    display: flex;
+}
+
+.evo h1:first-letter {
+    text-transform: uppercase;
+}
+
+.cabecera{
+
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.593);
+    background-size: cover;
+    background-position: center;
+    background-repeat:space;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    z-index: 1;
+    text-align: left;
+    padding-top: 1%;
+
+}
+#portada{
+    margin-left: 0.6%;
+    position: absolute;
+    transition: transform 0.9s ease-in-out;
+}
+
+@keyframes mover-imagen {
+    0% {
+      left: 0%;
+    }
+    50% {
+      left: -2%;
+    }
+    100%{
+        left: 0%;
+    }
+  }
+#portada2{
+    position: absolute;
+}
+  
+#portada:hover {
+    transform: rotate(360deg);
+    animation: mover-imagen 2s linear infinite ;
+}

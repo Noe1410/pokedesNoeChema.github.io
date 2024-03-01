@@ -1,0 +1,577 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: 0.5s ease-in-out;
+} 
+
+/* CABECERA */
+
+.cabecera{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.593);
+    background-size: cover;
+    background-position: center;
+    background-repeat:space;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+
+}
+#portada{
+    margin-left: 45%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+
+}
+#portada2{
+    margin-left: 44%;
+    position: absolute;
+}
+  #portada:hover {
+    transform: rotate(360deg);
+  }
+.buscador {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+input{
+    box-sizing: border-box;
+    margin-left: 41%;
+    background-color: transparent;
+    height: 40px;
+    outline: none;
+    border: 2px solid #212F3C ;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #212F3C , inset 0 0 10px #545454 ;
+    color: #212F3C ;
+    font-size: 16px;
+    transition: all .10s ease;
+}
+
+::placeholder{
+    color: #212F3C ;
+}
+/* BOTON MODO OSCURO */
+#container{
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 80%;
+    width: 80px;
+    height: 40px;
+    box-shadow: inset 4px 4px 6px grey, inset -4px -4px 6px grey;
+    cursor: pointer;
+}
+.toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    transform: scale(.7);
+    background-color: linear-gradient(145deg, white,black);
+    border-radius: 25px;box-shadow: 3px 3px 8px grey,-3px -3px 8px grey;
+}
+#container.active .toggle{
+    left: 40px;
+    
+}
+#pokeContainer.active{
+    background-color: #101010;
+    color: white;
+}
+
+#pokeContainer .tarjeta.active{
+    box-shadow: 0 0 10px #fdfeff, inset 0 0 10px #ffffff;
+
+}
+
+  /* TIPOS */
+.sintipo{
+    color: black;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+    
+}
+
+.planta{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px #239B56  , inset 3px 0px 10px #239B56;
+    animation: plantaAnimacion 3s linear infinite alternate both;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes plantaAnimacion{
+    0%{
+        background: #008202;
+    }
+    50%{
+        background: #06BF09;
+    }
+    100%{
+        background: #0CEA10;
+    }
+}
+
+.fuego{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px #F39C12  , inset 3px 0px 10px #F39C12;
+    animation: fuegoAnimacion 3s linear infinite alternate both;
+    color: #E5E8E8;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes fuegoAnimacion{
+    0%{
+        background: #EC0404;
+    }
+    50%{
+        background: #FF9B00;
+    }
+    100%{
+        background: #FF6400;
+    }
+}
+.agua{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px #5499C7  , inset 3px 0px 10px #5499C7;
+    animation: aguaAnimacion 3s linear infinite alternate both;   
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes aguaAnimacion{
+    0%{
+        background: #1300FF;
+    }
+    50%{
+        background: #00C1FF;
+    }
+    100%{
+        background: #0083FF;
+    }
+}
+.electrico{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px yellow  , inset 3px 0px 10px yellow;
+    animation: electricoAnimacion 3s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes electricoAnimacion{
+    0%{
+        background: #ECFF00;
+    }
+    50%{
+        background: #FFC900;
+    }
+    100%{
+        background: #00FFFB;
+    }
+}
+.veneno{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px #9349F7  , inset 3px 0px 10px #9349F7;
+    animation: venenoAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes venenoAnimacion{
+    0%{
+        background: #8300FF;
+    }
+    50%{
+        background: #C100FF;
+    }
+    100%{
+        background: #5B109A;
+    }
+}
+.volador{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px grey  , inset 3px 0px 10px grey;
+    animation: voladorAnimacion 4s linear infinite alternate both;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes voladorAnimacion{
+    0%{
+        background: #E4E4E4;
+    }
+    50%{
+        background: #B9B9B8;
+    }
+    100%{
+        background: #737373;
+    }
+}
+.bicho{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px greenyellow  , inset 3px 0px 10px greenyellow;
+    animation: bichoAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes bichoAnimacion{
+    0%{
+        background: #46DC28;
+    }
+    50%{
+        background: #37F02E;
+    }
+    100%{
+        background: #53C44D;
+    }
+}
+.normal{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px black  , inset 3px 0px 10px black;
+    font-size: 20px;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+
+.tierra{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px brown  , inset 3px 0px 10px brown;
+    animation: tierraAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes tierraAnimacion{
+    0%{
+        background: #854005;
+    }
+    50%{
+        background: #AB6F3E;
+    }
+    100%{
+        background: #BF5904;
+    }
+}
+.hada{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px rgb(204, 112, 127)  , inset 3px 0px 10px rgb(238, 125, 143);
+    animation: hadaAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes hadaAnimacion{
+    0%{
+        background: #FA22C6;
+    }
+    50%{
+        background: #FF69DB;
+    }
+    100%{
+        background: #FF94E5;
+    }
+}
+.lucha{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px #F03535  , inset 3px 0px 10px #F03535;
+    animation: luchaAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes luchaAnimacion{
+    0%{
+        background: #F03535;
+    }
+    50%{
+        background: #B10B0B;
+    }
+    100%{
+        background: #E31515;
+    }
+}
+.psiquico{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px #B00CA4  , inset 3px 0px 10px #B00CA4;
+    animation: psiquicoAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes psiquicoAnimacion{
+    0%{
+        background: #B00CA4;
+    }
+    50%{
+        background: #CB49C2;
+    }
+    100%{
+        background: #BA02AC;
+    }
+}
+.roca{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px #90765E  , inset 3px 0px 10px #90765E;
+    animation: rocaAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes rocaAnimacion{
+    0%{
+        background: #7D420A;
+    }
+    50%{
+        background: #9E7146;
+    }
+    100%{
+        background: #90765E;
+    }
+}
+.acero{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px #888888  , inset 3px 0px 10px #888888;
+    animation: aceroAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes aceroAnimacion{
+    0%{
+        background: #888888;
+    }
+    50%{
+        background: #ABCACB;
+    }
+    100%{
+        background: #A4A4A4;
+    }
+}
+.hielo{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px skyblue  , inset 3px 0px 10px skyblue;
+    animation: hieloAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes hieloAnimacion{
+    0%{
+        background: #2FF9FF;
+    }
+    50%{
+        background: #63FAFF;
+    }
+    100%{
+        background: #9FFCFF;
+    }
+}
+.fantasma{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px #BB89FF  , inset 3px 0px 10px #BB89FF;
+    animation: fantasmaAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes fantasmaAnimacion{
+    0%{
+        background: #6F05FF;
+    }
+    50%{
+        background: #9D55FF;
+    }
+    100%{
+        background: #BB89FF;
+    }
+}
+.dragon{
+    font-size: 20px;
+    border-radius: 15%;
+    box-shadow: 0 0 20px darkblue  , inset 3px 0px 10px darkblue;
+    animation: dragonAnimacion 4s linear infinite alternate both;
+    padding: 3% 3% 3% 3%;
+    padding-bottom: 10px;
+}
+@keyframes dragonAnimacion{
+    0%{
+        background: #0008FF;
+    }
+    50%{
+        background: #5459FF;
+    }
+    100%{
+        background: #2F34CC;
+    }
+}
+/* CONTAINER */
+
+#pokeContainer{
+    background: rgb(204, 204, 204);
+    background-size: 400% 400%;
+    position:static;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25% 7% 3% 6%;
+}
+
+@keyframes fondo{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+#pokeContainer .tarjeta {
+    flex: 15%;
+    padding: 0 20px;
+    margin-top: 50px;
+    margin: 1%;
+    padding: 1% 0 3% 0;
+    background-color: var(--color-fondo);
+    color:var(--color-fuente);
+    outline: none;
+    border: 2px solid #212F3C;
+    border-radius: 5%;
+    box-shadow: 0 0 10px #626262, inset 0 0 10px #626262;
+    opacity: 0.95;
+    transition: transform 0.3s ease;
+}
+
+#pokeContainer .tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.nombre{
+    font-family: Barlow;
+    font-size: 25px;
+    margin-right: 5%;
+
+}
+
+.id{
+    font-family: Barlow;
+    font-size: 15px;
+}
+
+
+.tarjeta h1:first-letter {
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px){
+    #pokeContainer .tarjeta{
+        flex: 100%;
+        max-width: 100%;
+        margin-top: 50px;
+    }
+    .buscador:hover input{
+        width: 150px;
+    }
+    
+    .buscador:hover .btn{
+        margin-left: 125px;
+    }
+    .btn {
+        width: 30px;
+        height: 30px;
+    }
+    input{
+        height: 20px;
+
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #pokeContainer .tarjeta {
+        flex: 100%;
+        max-width: 100%;
+        margin-top: 50px;
+        
+    }
+    .sintipo,
+    .planta,
+    .fuego,
+    .agua,
+    .electrico,
+    .veneno,
+    .volador,
+    .bicho,
+    .normal,
+    .tierra,
+    .hada,
+    .lucha,
+    .psiquico,
+    .roca,
+    .acero,
+    .hielo,
+    .fantasma,
+    .dragon {
+        font-size: 16px;
+    }
+}
+
+@media only screen and(min-width: 768px){
+    #pokeContainer .tarjeta{
+        flex: 50%;
+        max-width: 100%;
+        margin-top: 50px;
+    }
+
+    .sintipo,
+    .planta,
+    .fuego,
+    .agua,
+    .electrico,
+    .veneno,
+    .volador,
+    .bicho,
+    .normal,
+    .tierra,
+    .hada,
+    .lucha,
+    .psiquico,
+    .roca,
+    .acero,
+    .hielo,
+    .fantasma,
+    .dragon {
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+
+
